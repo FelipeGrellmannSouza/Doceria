@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* defenindo cores do projeto e fontes também */
+:root {
+    --cor1: #f8f6e1;
+    --cor2: #f8cfcd;
+    --cor3: #675446;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: var(--cor1);
+    font-size: 1.2em;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.flex1 {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------- NAVBAR ---------------- */
+#inicio {
+    background-color: var(--cor2);
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 30px;
+
+    
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: var(--cor3);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 100px;
+}
+
+.menu li {
+    margin: 0 40px;
+}
+
+.logo_nav img {
+    width: 100px;
+    left: 0;
+    right: 0;
+    top: 0%;
+    margin: auto;
+    position: absolute;
+}
+
+.logo_nav {
+    background: #f5f5f2;
+    box-shadow: 0px 4px 0px rgba(103, 102, 102, 0.12);
+    border-radius: 0 0 50% 50%;
+    max-height: 60px;
+    left: 0;
+    right: 0;
+    top: 0%;
+    padding: 60px 110px;
+    margin: auto;
+    position: absolute;
+    width: 110px;
+}
+
+/* ---------------- BANNER ---------------- */
+#imagem-principal img {
+    width: 100%;
+}
+
+main {
+    height: 75vh;
+    background: url(img/fatia_bolo.jpeg);
+    background-size: cover;
+    background-position: right;
+    color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 100px 100px;
+}
+
+main h1 {
+    font-size: 80px;
+}
+
+main h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    width: 100px;
+    color: var(--cor3);
+    font-size: 1em;
+    font-weight: 700;
+    background: var(--cor1);
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    /* flexbox para centralizar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* ---------------- Imagem e Texto ----------------*/
+
+#texto {
+    width: 1500px;
+    border-radius: 100px;
+    padding: 50px 0px;
+    margin:50px auto;
+    background-color: var(--cor1);  
+    background-attachment: fixed;     
+}
+
+.imagem_texto{
+    display: inline;
+}
+.imagem_texto img{
+    border-radius: 50px;
+    margin-right: 50px;
+    height: 350px;
+}
+.texto_info{
+    margin-right: 100px;
+}
+
+.texto_info h1{
+    font-size: 2em;
+}
+
+.texto_info p{
+    font-size: 1.2em;
+}
