@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
-/* defenindo cores do projeto e fontes também */
 :root {
     --cor1: #f8f6e1;
     --cor2: #f8cfcd;
     --cor3: #675446;
-
 }
 
 * {
@@ -14,59 +12,47 @@
     border: 0;
 }
 
-body {
-    background-color: var(--cor1);
+html{
+    scroll-behavior: smooth;    
+}
+
+body{
     font-size: 1.2em;
+}
+iframe{
+    width: 100%;
 }
 
 .container {
     margin: 0 auto;
 }
 
-.flex1 {
-    display: flex;
-    align-items: center;
-}
-
-/* ---------------- NAVBAR ---------------- */
-#inicio {
-    background-color: var(--cor2);
-    height: 90px;
+.flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    font-size: 30px;
-
-    
 }
 
-.menu {
+/* flex1 {
     display: flex;
     align-items: center;
-}
+} */
 
-.menu a {
-    color: var(--cor3);
-}
-
-.menu ul {
-    list-style: none;
+.flex4{
     display: flex;
-    margin: 100px;
+    flex-wrap: wrap; /* quebrar linha quando tiver todo mundo junto*/
+    justify-content: space-evenly
+}
+.flex5{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.menu li {
-    margin: 0 40px;
-}
-
-.logo_nav img {
-    width: 100px;
-    left: 0;
-    right: 0;
-    top: 0%;
-    margin: auto;
-    position: absolute;
+/* Diferentes Telas */
+/* Smartphone Portait */
+/* NavBar */
+header{
+    height: 100px;
+    background: var(--cor2);
 }
 
 .logo_nav {
@@ -77,37 +63,79 @@ body {
     left: 0;
     right: 0;
     top: 0%;
-    padding: 60px 110px;
+    padding: 50px 20px;
     margin: auto;
     position: absolute;
+    width: 120px;
+    height: 25px;
+}
+
+.logo_nav img{
     width: 110px;
+    left: 0;
+    right: 0;
+    top: 0%;
+    margin: auto;
+    position: absolute;
 }
 
-/* ---------------- BANNER ---------------- */
-#imagem-principal img {
+#check{
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: rgba(0, 0, 0, 0.488);
+}
+
+nav ul{
+    list-style: none;
+    background-color: var(--cor1);
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    right: -100%;
     width: 100%;
+    transition: all 0.55s;
 }
 
-main {
-    height: 75vh;
+#check:checked~ul {
+    right: 0;
+
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor3);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+/* Banner */
+main{
+    height: 50vh;
     background: url(img/fatia_bolo.jpeg);
     background-size: cover;
-    background-position: right;
+    background-position: center;
     color: var(--cor1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border-radius: 0 0 100px 100px;
 }
 
-main h1 {
-    font-size: 80px;
+main h1{
+    font-size: 2.5em;
 }
 
-main h2 {
-    font-size: 30px;
-    text-align: center;
+main h2{
+    font-size: 1.1em;
 }
 
 .button {
@@ -118,7 +146,7 @@ main h2 {
     font-weight: 700;
     background: var(--cor1);
     padding: 8px 20px;
-    border: 2px solid white;
+    border: 2px solid var(--cor3);
     border-radius: 25px;
     /* flexbox para centralizar */
     display: flex;
@@ -127,33 +155,140 @@ main h2 {
     margin: 20px auto;
 }
 
-/* ---------------- Imagem e Texto ----------------*/
+
+
+/* Imagem e texto */
 
 #texto {
-    width: 1500px;
-    border-radius: 100px;
-    padding: 50px 0px;
-    margin:50px auto;
-    background-color: var(--cor1);  
-    background-attachment: fixed;     
+    padding: 0px 5px;
 }
 
 .imagem_texto{
     display: inline;
+    margin: 0 auto;
 }
-.imagem_texto img{
+
+.imagem_texto img {
     border-radius: 50px;
-    margin-right: 50px;
-    height: 350px;
+    max-width: 90%;   
+    margin: 20px;
 }
+
 .texto_info{
-    margin-right: 100px;
+    margin: 0px 30px 30px 30px;
+    color: var(--cor3);
+    border-radius: 10px;
 }
 
-.texto_info h1{
+.texto_info p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+
+}
+
+/* Sobre */
+
+.card{
+    margin-top: 20px;
+    width: 338px;
+    height: 370px;
+    background: var(--cor2);
+    border: 1px solid var(--cor3);
+    border-radius: 25px;
+    text-align: center;
+}
+.card h3{
+    margin-top: 15px;
+    font-size: 1.6em;
+}
+.card p{
+    text-align: left;
+    padding: 10px 30px 50px 30px;
+    color: var(--cor4);
+}
+.card a{
+    padding: 10px 100px;
+    border: 0;
+}
+
+
+#conteudo {
+    padding: 50px 0px;
+}
+
+
+#conteudo h2{
     font-size: 2em;
+    padding-bottom: 0;
+    text-align: center;
 }
 
-.texto_info p{
-    font-size: 1.2em;
+/* Rodapé */
+footer{
+    padding: 50px;
+    background: var(--cor3);
+    color: var(--cor1);
+    text-align: center;
+}
+.horarios h3{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.horarios ul{
+    list-style: none;
+}
+
+.logo_rodape{
+    margin-top: 30px;
+}
+.logo_rodape img{
+    height: 150px;
+    
+}
+.social{
+    margin-top: 25px;
+}
+
+.social img{
+    height:50px;
+    margin: 0 px;
+}
+
+
+
+
+
+/* Smartphone Landscape */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .logo_nav img {
+            width: 189px;
+            height: 189px;
+            margin: 30px;
+            margin-left: 30px;
+    }
+}
+
+/* Tablet Portatil */
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Tablet LandScape */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* PC */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
